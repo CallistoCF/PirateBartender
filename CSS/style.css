@@ -1,0 +1,65 @@
+body {
+  background-image: url(../Images/bround.png);
+}
+
+@font-face {
+    font-family: RAPSCALL;
+    src: url(RAPSCALL.ttf);
+}
+
+.mainbox {
+  width: 90%;
+  background-color: black;
+  margin: 20px;
+  border: 5px solid red;
+}
+
+.ansbox {
+  width: 90%;
+  height: 300px;
+  margin: 20px;
+  background: grey;
+  border: 5px solid red;
+  opacity: .8;
+  font-family: RAPSCALL;
+  font-size: 48px;
+  color: red;
+  text-align: center;
+}
+
+.choices {
+  width: 90%;
+  height: 75px;
+  z-index: 2;
+}
+
+.yea, .nay {
+  font-family: RAPSCALL;
+  width: 40%;
+  height: 50px;
+  background-color: black;
+  color: red;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.intropic {
+  background-image: url(../Images/bar2.jpg);
+  width: 95%;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 10px;
+}
+
+.pcw {
+  z-index: 5;
+  height: 350px;
+  width: 250px;
+  position: relative;
+  left: 40%;
+  top: 15%;
+  background-image: url(../Images/pcw2.png);
+  background-size: cover;
+}
