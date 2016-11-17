@@ -9,6 +9,7 @@ $( document ).ready(function() {
   var drink = function(ingrediants){
     this.ingrediants = ingrediants;
   };
+  //basic prototype function
   drink.prototype.tellme = function() {
     var recipe = "";
     for (var i=0; i < 3; i++){
@@ -26,14 +27,6 @@ $( document ).ready(function() {
       timer = x;
       console.log("click: T is now " + timer);
     }
-
-          /*$('#action-button').click();
-          $('#searcho').empty();
-          $('#picto').hide();
-          $('#info').hide();
-          $('#infob').hide();
-          $('#infoc').hide();*/
-        });
 
   $('.nay').click(function(e){
      if (timer != -3){
@@ -170,6 +163,7 @@ $( document ).ready(function() {
           if (YorN === 'n') {
             ingrediants.push("Whiskey");
             console.log("YorN is " + YorN + " and t is " + timer);
+            //outcome; what more to add?
             $('.disc').html("<p>And your Drink is...</p>");
             var d = new drink(ingrediants);
             console.log(d);
@@ -177,9 +171,11 @@ $( document ).ready(function() {
                 };
           break;
         default:
+          //any ideas how to handle or do i even need to handle default?
           console.log("default, but how?");
         }
         console.log("handler: t is now " + timer)
         return timer;
+        //returns updated timer.
       };
 });
