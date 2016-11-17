@@ -1,14 +1,19 @@
+//Pirate Bartender project, warning; sloppy code ahead!
 $( document ).ready(function() {
   console.log( 'ready!' );
-
+  //from animate package, fun easy animations!  Executes at startup
   $('.pcw').addClass('animated bounceInLeft');
 	$('.ansbox').addClass('animated bounceInLeft');
   $('body').addClass('animated zoomIn');
+
+  //global variables, timer is question count, ingrediants is array of ingrediants
   var timer = 0;
   var ingrediants = [];
+  //drink prototype, very basic
   var drink = function(ingrediants){
     this.ingrediants = ingrediants;
   };
+  //very basic way of describing drinks without any flair at all
   drink.prototype.tellme = function() {
     var recipe = "";
     for (var i=0; i < 3; i++){
@@ -17,7 +22,7 @@ $( document ).ready(function() {
     console.log("Recipe is: " + recipe);
     return recipe;
   };
-
+  //named poorly, yea is the button on the left
   $('.yea').click(function(e){
     if (timer != -2){
       console.log("yea has been pressed");
@@ -27,14 +32,8 @@ $( document ).ready(function() {
       console.log("click: T is now " + timer);
     }
 
-          /*$('#action-button').click();
-          $('#searcho').empty();
-          $('#picto').hide();
-          $('#info').hide();
-          $('#infob').hide();
-          $('#infoc').hide();*/
         });
-
+  //also named poorly, nay is the button on the right
   $('.nay').click(function(e){
      if (timer != -3){
        console.log("nay has been pressed");
@@ -48,7 +47,8 @@ $( document ).ready(function() {
       }
     });
 
-
+    //massive function that adds text based upon the last timer#'s response,
+    //and the yeah or nay provided
    function handleresponse(ingrediants, timer, YorN){
      console.log("Handle Response Started");
       switch(timer) {
